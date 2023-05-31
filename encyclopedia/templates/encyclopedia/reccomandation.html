@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Recomended Pages</h1>
+
+    <ul>
+        {% for reccomend in reccomandation %}
+            <li><a href="{% url 'content' reccomend %}">{{ reccomend }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
